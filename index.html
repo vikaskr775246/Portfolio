@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* wapstie in under contraction */
+        #social-media-icons {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: baseline;
+            display: none;
+            /* font-family: 'Poppins', sans-serif; */
+        }
+
+        #social-media-icons li {
+            padding: 10px;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        /* wapstie in under contraction */
+    </style>
+</head>
+
+<body>
+    <nav id="nav_1">
+        <div id="logo">portfolio.</div>
+        <ul id="menu">
+            <li><a href="#home" class="active">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#experience">skils</a></li>
+            <li><a href="#portfolio">portfolio</a></li>
+            <li><a href="#contact">contact</a></li>
+        </ul>
+    </nav>
+    <header class="center" id="home">
+        <div id="my-info" class="center-mx-wth">
+            <div id="my-self" class="m-15">
+                <h4>hello, i'm</h4>
+                <h1 id="name">vikas kumar</h1>
+                <h2 id="categorie">web developer</h2>
+                <h3 id="location">from greater noida</h3>
+                <a href="images/Resume.pdf" download id="cv">Download CV</a>
+            </div>
+            <div id="my-img" class="m-15">
+                <figure>
+                    <img src="images/me.png" alt="my-image">
+                </figure>
+            </div>
+        </div>
+
+    </header>
+    <section id="about" class="center">
+        <h4 class="small-h">Get To Know</h4>
+        <h1 class="big-h">About Me</h1>
+        <div id="about-wapper" class="center-mx-wth p-15">
+            <div id="about-img" class="m-15">
+                <figure>
+                    <img src="images/Smile-Vikas.jpg" alt="about-me-image">
+                </figure>
+            </div>
+            <div id="about-me-content" class="m-15">
+                <div id="about-cards">
+                    <article class="about-card center">
+                        <div class="about-icon"><i class="fa-solid fa-award"></i></div>
+                        <h5>experience</h5>
+                        <small>fresher</small>
+                    </article>
+                    <article class="about-card center">
+                        <div class="about-icon"><i class="fa-solid fa-list-check"></i></div>
+                        <h5>project</h5>
+                        <small>10+ completed</small>
+                    </article>
+                </div>
+                <p>I am a web developer Right now I am focusing on React, but still searching for other technologies and
+                    frameworks that catch my interest! If you're looking for a developer to add to your team, I'd love
+                    to hear from you!</p>
+            </div>
+        </div>
+    </section>
+    <div id="experience" class="center">
+        <h4 class="small-h">What skils I have</h4>
+        <h1 class="big-h">My Experience</h1>
+        <div id="experience-wapper" class="center center-mx-wth m-15">
+            <article class="center">
+                <h1 class="big-h">frontend Development</h1>
+                <div id="skills-box" class="center">
+                    <div class="skill-box center">
+                        <div class="skills">
+                            <box-icon type='solid' name='badge-check' color="var(--color-primary)"></box-icon>
+                            <div class="skill">
+                                <h3 class="skill-name">HTML</h3>
+                                <div class="skill-info">Experienced</div>
+                            </div>
+                        </div>
+                        <div class="skills">
+                            <box-icon type='solid' name='badge-check' color="var(--color-primary)"></box-icon>
+                            <div class="skill">
+                                <h3 class="skill-name">CSS</h3>
+                                <div class="skill-info">Experienced</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-box center">
+                        <div class="skills">
+                            <box-icon type='solid' name='badge-check' color="var(--color-primary)"></box-icon>
+                            <div class="skill">
+                                <h3 class="skill-name">Bootstrap</h3>
+                                <div class="skill-info">Intermediate</div> <!-- beginner -->
+                            </div>
+                        </div>
+                        <div class="skills">
+                            <box-icon type='solid' name='badge-check' color="var(--color-primary)"></box-icon>
+                            <div class="skill">
+                                <h3 class="skill-name">Wordpress</h3>
+                                <div class="skill-info">Beginner</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-box center">
+                        <div class="skills">
+                            <box-icon type='solid' name='badge-check' color="var(--color-primary)"></box-icon>
+                            <div class="skill">
+                                <h3 class="skill-name">Javascript</h3>
+                                <div class="skill-info">Intermediate</div>
+                            </div>
+                        </div>
+                        <div class="skills">
+                            <box-icon type='solid' name='badge-check' color="var(--color-primary)"></box-icon>
+                            <div class="skill">
+                                <h3 class="skill-name">Jquery</h3>
+                                <div class="skill-info">Intermediate</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-box center">
+                        <div class="skills">
+                            <box-icon type='solid' name='badge-check' color="var(--color-primary)"></box-icon>
+                            <div class="skill">
+                                <h3 class="skill-name">React</h3>
+                                <div class="skill-info">Beginner <span class="skills-hide">sdfa</span></div>
+                            </div>
+                        </div>
+                        <div class="skills skills-hide">
+                            <box-icon type='solid' name='badge-check' color="var(--color-primary)"></box-icon>
+                            <div class="skill">
+                                <h3 class="skill-name">Wordpress</h3>
+                                <div class="skill-info">Beginner</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+    <div id="portfolio" class="center">
+        <h4 class="small-h">my recent work</h4>
+        <h1 class="big-h">portfolio</h1>
+        <div id="portfolio-wapper" class="center-mx-wth center">
+            <div id="portfolio-cards" class="center">
+                <div class="portfolio-card">
+                    <div class="work-img">
+                        <figure>
+                            <img src="images/portfolio-img-1.png" alt="portfolio-img">
+                        </figure>
+                    </div>
+                    <div class="work-info">
+                        <h2>Zip File Reader.</h2>
+                        <p>ZiP Reader, you will select a zip file and download each file by clicking on it.</p>
+                    </div>
+                    <div class="work-btns">
+                        <a href="https://github.com/vikaskr775246/Zip_File_Reader.git" target="_blank"
+                            class="github btn">github</a>
+                        <a href="https://codepen.io/vikaskr775246/full/jOxPRGR" target="_blank" class="demo btn">Live
+                            Demo</a>
+                    </div>
+                </div>
+                <div class="portfolio-card">
+                    <div class="work-img">
+                        <figure>
+                            <img src="images/portfolio-img-2.png" alt="portfolio-img">
+                        </figure>
+                    </div>
+                    <div class="work-info">
+                        <h2>File Uploader with bytes.</h2>
+                        <p>you will select a file and find the exact file size in Bytes, KB,MB and GB.</p>
+                    </div>
+                    <div class="work-btns">
+                        <a href="https://github.com/vikaskr775246/File_Upload.git" target="_blank"
+                            class="github btn">github</a>
+                        <a href="https://codepen.io/vikaskr775246/full/abGpKda" target="_blank" class="demo btn">Live
+                            Demo</a>
+                    </div>
+
+                </div>
+                <div class="portfolio-card">
+                    <div class="work-img">
+                        <figure>
+                            <img src="images/portfolio-img-3.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="work-info">
+                        <h2>Notes App</h2>
+                        <p>notes application that uses locate storage
+                            and allows edits , delete notes.</p>
+                    </div>
+                    <div class="work-btns">
+                        <a href="https://github.com/vikaskr775246/Notes-App.git" target="_blank"
+                            class="github btn">github</a>
+                        <a href="https://codepen.io/vikaskr775246/full/MWGpzEZ" target="_blank" class="demo btn">Live
+                            Demo</a>
+                    </div>
+                </div>
+                <div class="portfolio-card">
+                    <div class="work-img">
+                        <figure>
+                            <img src="images/portfolio-img-4.png" alt="portfolio-img">
+                        </figure>
+                    </div>
+                    <div class="work-info">
+                        <h2>Tic Tac Toe</h2>
+                        <p>The tic tac toe game is a two
+                            Players game. One is X and two is
+                            O.
+                        </p>
+                    </div>
+                    <div class="work-btns">
+                        <a href="https://github.com/vikaskr775246/Tic-Tac-Toe.git" target="_blank"
+                            class="github btn">github</a>
+                        <a href="https://codepen.io/vikaskr775246/full/zYjdNby" target="_blank" class="demo btn">Live
+                            Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contact" class="center">
+        <h4 class="small-h">get in touch</h4>
+        <h1 class="big-h">contact Me</h1>
+        <div id="contact-wapper" class="center-mx-wth center">
+            <aside class="center m-15">
+                <div class="contect-box center m-15">
+                    <box-icon name='envelope' color="var(--text-col)"></box-icon>
+                    <h3>email</h3>
+                    <p>vikashkr775246@gmail.com</p>
+                    <a href="mailto:vikashkr775246@gmail.com&subject=hogaya" target="_blank" class="send_btn">send a
+                        massage</a>
+                </div>
+                <div class="contect-box center m-15">
+                    <box-icon name='messenger' type='logo' color="var(--text-col)"></box-icon>
+                    <h3>messenger</h3>
+                    <p>vikas kumar</p>
+                    <a href="https://m.me/100014834951104" target="_blank" class="send_btn">send a
+                        massage</a>
+                </div>
+                <div class="contect-box center m-15">
+                    <box-icon name='whatsapp' type='logo' color="var(--text-col)" class="bx-md"></box-icon>
+                    <h3>whatsapp</h3>
+                    <p>+91 9818471075</p>
+                    <a href="http://wa.me/+919818471075" target="_blank" class="send_btn">send a
+                        massage</a>
+                </div>
+            </aside>
+            <form action="#" class="center">
+                <div id="form-wapper" class="center m-15">
+                    <input type="text" name="full_Name" id="full_Name" placeholder="Your Full Name" class="m-15">
+                    <input type="email" name="email" id="email" placeholder="Your Email" class="m-15">
+                    <textarea name="message" id="massage" cols="30" rows="10" placeholder="Your Message"
+                        class="m-15"></textarea>
+                    <input type="button" value="Send Massage" class="btn m-15" id="submit">
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer class="center">
+        <div id="footer-wapper" class="center-mx-wth center">
+            <h2 class="m-15">VIKAS KUMAR</h2>
+            <ul id="footer-menu" class="m-15 center">
+                <li><a href="#home">home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#experience">skils</a></li>
+                <li><a href="#portfolio">portfolio</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+            <ul id="footer-social-media-icons" class="m-15 center">
+                <li><a href="https://www.facebook.com/profile.php?id=100014834951104" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="#ComingSoon"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
+            <p class="m-15">&#169; vikas. All Rights reserved</p>
+        </div>
+    </footer>
+</body>
+<script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+<script>
+
+    function querySelector(value, parent = document) {
+        return parent.querySelector(`${value}`);
+    }
+    const nav_1 = querySelector('#nav_1');
+    const about_img = querySelector('#about-img');
+    about_img.onmouseenter = () => {
+        about_img.children[0].classList.add('active');
+    };
+    about_img.onmouseleave = () => {
+        about_img.children[0].classList.remove('active');
+    };
+    window.onscroll = (e) => {
+        const y = Math.floor(pageYOffset);
+        // console.log(y);
+        if (y > 70) {
+            nav_1.classList.add('active');
+        } else {
+            nav_1.classList.remove('active');
+        }
+    }
+</script>
+
+</html>

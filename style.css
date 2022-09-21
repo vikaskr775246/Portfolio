@@ -1,0 +1,589 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-col: #16182c;
+    --color-primary: #48b7f3;
+    --text-col: white;
+    --text-light: hsl(237, 17%, 76%);
+    --card-bg-col: #2b2c6c;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-col);
+    width: 100vw;
+    overflow-x: hidden;
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: capitalize;
+    position: relative;
+}
+
+/* All Time class use start */
+.m-15 {
+    margin: 15px;
+}
+
+.p-15 {
+    padding: 15px;
+}
+
+.center-mx-wth {
+    max-width: 1280px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* All Time class use end */
+
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .3s;
+}
+
+nav.active {
+    background-color: rgba(0, 0, 0, .4);
+}
+
+#logo {
+    font-size: 2rem;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu li {
+    margin: 0 12px;
+}
+
+#menu li a {
+    padding: 8px 12px;
+    font-size: 1.1rem;
+}
+
+#menu li a.active {
+    background-color: var(--color-primary);
+    border-radius: 8px;
+}
+
+/* nav end */
+header {
+    position: relative;
+    padding-bottom: 8rem;
+    z-index: 2;
+}
+
+header::before {
+    content: 'portfolio';
+    position: absolute;
+    top: 30%;
+    right: 20px;
+    color: var(--color-primary);
+    transform: rotate(270deg) translate(3%, 140%);
+    font-size: 8rem;
+    opacity: .2;
+    z-index: 1;
+    filter: drop-shadow(0px 13px 1px black);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-col);
+}
+
+#my-info {
+    position: relative;
+    z-index: 2;
+    margin-top: 3rem;
+    justify-content: space-around;
+}
+
+#my-self {
+    color: var(--text-col);
+}
+
+#my-self h4 {
+    word-spacing: 5px;
+}
+
+#my-self #name {
+    margin: 10px 0;
+    font-size: 2.5rem;
+}
+
+#my-self #categorie {
+    color: var(--color-primary);
+    font-size: 1.8rem;
+}
+
+#my-self #location {
+    margin: 8px 0 30px;
+}
+
+#cv {
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    padding: 10px 18px;
+    border-radius: 5px;
+    outline: none;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    transition: .5s;
+}
+
+#cv:hover {
+    background-color: var(--color-primary);
+    color: var(--card-bg-col) !important;
+}
+
+#my-img figure {
+    background: linear-gradient(var(--color-primary), transparent);
+    border-radius: 8rem 8rem 0 0;
+    overflow: hidden;
+    height: 360px;
+    max-width: 300px;
+    width: 100%;
+}
+
+#about-img figure img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+img {
+    width: 100%;
+}
+
+/* About-Me */
+#about {
+    padding: 50px 0;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    flex-direction: column;
+    color: white;
+}
+
+.small-h {
+    color: var(--text-light);
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+.big-h {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+#about-wapper {
+    margin-top: 2rem;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+}
+
+#about-img {
+    flex: 0 1 310px;
+    max-width: 310px;
+    border-radius: 20px;
+    background: var(--color-primary);
+}
+
+#about-img figure.active {
+    transform: rotate(0deg);
+}
+
+#about-img figure {
+    max-height: 310px;
+    width: 100%;
+    border-radius: 20px;
+    transform: rotate(10deg);
+    overflow: hidden;
+    transition: .5s;
+}
+
+/* About-Card Start */
+#about-me-content {
+    flex-basis: 52%;
+    margin: 15px;
+}
+
+#about-cards {
+    width: 100%;
+    display: flex;
+}
+
+.about-card {
+    background-color: var(--card-bg-col);
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.about-card .about-icon {
+    font-size: 1.3rem;
+    color: var(--color-primary);
+}
+
+.about-card h5 {
+    font-size: 1.2rem;
+    margin: 5px 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.about-card small {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-light);
+}
+
+#about-me-content p::first-letter {
+    text-transform: uppercase;
+}
+
+#about-me-content p {
+    font-size: 1.1rem;
+    text-transform: lowercase;
+    text-align: justify;
+}
+
+/* About-Card End */
+
+/* experience start*/
+#experience {
+    position: relative;
+    padding: 50px 0;
+}
+
+#experience-wapper {
+    margin-top: 3rem;
+    width: 100%;
+    max-width: 720px;
+    background-color: var(--card-bg-col);
+    padding: 40px 0 20px;
+    border-radius: 50px;
+}
+
+.skills-hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#experience-wapper article {
+    width: 100%;
+}
+
+#experience-wapper h1 {
+    margin-bottom: 1rem;
+}
+
+#skills-box {
+    width: 100%;
+}
+
+#skills-box>* {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.skill-box .skills {
+    display: flex;
+    margin: 2rem 0 1rem;
+}
+
+.skill-box .skills .skill {
+    margin-left: 10px;
+}
+
+.skill-box .skills .skill .skill-name {
+    color: var(--text-col);
+    margin-bottom: 10px;
+}
+
+.skill-box .skills .skill .skill-info {
+    color: var(--text-light);
+    font-weight: bold;
+}
+
+@media screen and (max-width:768px) {
+    #experience-wapper {
+        width: calc(100% - 15px);
+        max-width: 540px;
+    }
+}
+
+/* experience end*/
+
+/* portfolio start */
+#portfolio {
+    position: relative;
+    padding: 50px 0;
+}
+
+#portfolio-wapper {
+    margin-top: 2rem;
+}
+
+#portfolio-cards {
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.portfolio-card {
+    background-color: var(--card-bg-col);
+    flex: 1 380px;
+    max-width: 380px;
+    padding: 30px;
+    margin: 15px;
+    border-radius: 40px;
+
+}
+
+.work-img figure img {
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.work-info {
+    color: var(--text-col);
+    margin-top: 1rem;
+}
+
+.work-info h2 {
+    margin-bottom: 5px;
+}
+
+.work-btns {
+    margin-top: 2rem;
+}
+
+.btn {
+    font-size: 18px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: .3s ease-in;
+}
+
+.github {
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.github:hover {
+    background-color: var(--color-primary);
+    color: var(--card-bg-col);
+}
+
+.demo {
+    border: 1px solid var(--color-primary);
+    background-color: var(--color-primary);
+    color: var(--card-bg-col);
+    margin-left: 1rem;
+}
+
+.demo:hover {
+    color: var(--color-primary);
+    background-color: transparent;
+}
+
+/* portfolio end */
+
+/* contact start */
+#contact {
+    position: relative;
+    padding: 80px 0;
+}
+
+#contact-wapper {
+    margin-top: 1rem;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+#contact-wapper aside {
+    flex: 1 1 30%;
+}
+
+.contect-box {
+    background-color: var(--card-bg-col);
+    max-width: 300px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 20px;
+    color: var(--text-col);
+}
+
+.contect-box h3 {
+    margin: 8px 0;
+}
+
+.contect-box p {
+    margin: 8px 0 1rem;
+}
+
+.contect-box .send_btn {
+    color: var(--color-primary);
+    display: inline-block;
+}
+
+form {
+    flex: 1 1 60%;
+}
+
+#form-wapper {
+    width: 100%;
+    max-width: 90%;
+}
+
+#form-wapper>* {
+    font-family: 'Ubuntu', sans-serif !important;
+}
+
+#form-wapper>:not(input:last-child) {
+    width: 100%;
+    padding: 20px 10px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    background-color: transparent;
+    border: 4px solid var(--card-bg-col);
+    outline: none;
+    resize: none;
+    color: white;
+}
+
+#submit {
+    border: 1px solid var(--color-primary);
+    background-color: var(--color-primary);
+    color: var(--card-bg-col);
+    align-self: flex-start;
+    cursor: pointer;
+    padding: 10px 15px;
+}
+
+#submit:hover {
+    color: var(--color-primary);
+    background-color: transparent;
+}
+
+/* contect end */
+
+/* footer start */
+footer {
+    position: relative;
+    background-color: var(--color-primary);
+    padding: 50px 0;
+}
+
+#footer-wapper ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#footer-wapper ul li {
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+#footer-wapper ul li a {
+    padding: 5px 10px;
+    display: inline-block;
+    transition: .5s;
+}
+
+#footer-social-media-icons a {
+    background-color: var(--card-bg-col);
+    width: 40px;
+    height: 40px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#footer-social-media-icons a:hover {
+    color: var(--card-bg-col);
+    background-color: var(--color-primary);
+}
+
+#footer-wapper p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+}
+
+/* footer end */
+/* media query start */
+@media screen and (max-width:768px) {
+    nav {
+        display: none;
+    }
+
+    #my-info {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #about-wapper {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+
+@media screen and (max-width:430px) {
+
+    #about-img {
+        margin: 0;
+    }
+
+    #about-me-content {
+        margin: 2rem 0 0;
+    }
+
+    .about-card h5 {
+        font-size: 1.1rem;
+    }
+
+    .about-card small {
+        font-size: 1rem;
+    }
+}
+
+/* media query end */
