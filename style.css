@@ -177,8 +177,15 @@ a {
     border-radius: 8rem 8rem 0 0;
     overflow: hidden;
     height: 360px;
+    min-width: 300px;
     max-width: 300px;
     width: 100%;
+}
+
+#my-img figure img {
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
 }
 
 #about-img figure img {
@@ -463,20 +470,21 @@ img {
     display: inline-block;
 }
 
-form {
+#form-wapper {
+    position: relative;
     flex: 1 1 60%;
 }
 
-#form-wapper {
+form{
     width: 100%;
     max-width: 90%;
 }
 
-#form-wapper>* {
+form>* {
     font-family: 'Ubuntu', sans-serif !important;
 }
 
-#form-wapper>:not(input:last-child) {
+form>:not(input:last-child) {
     width: 100%;
     padding: 20px 10px;
     font-size: 1.2rem;
@@ -495,6 +503,7 @@ form {
     align-self: flex-start;
     cursor: pointer;
     padding: 10px 15px;
+    width: auto;
 }
 
 #submit:hover {
