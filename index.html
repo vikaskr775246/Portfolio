@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <script defer src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <script defer src="fontawesome.min.js"></script>
+    <script defer src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     <style>
         /* wapstie in under contraction */
@@ -51,7 +53,7 @@
             </div>
             <div id="my-img" class="m-15">
                 <figure>
-                    <img src="images/me.png" alt="my-image">
+                    <img src="images/me.webp" alt="my-image">
                 </figure>
             </div>
         </div>
@@ -63,7 +65,7 @@
         <div id="about-wapper" class="center-mx-wth p-15">
             <div id="about-img" class="m-15">
                 <figure>
-                    <img src="images/Smile-Vikas.jpg" alt="about-me-image">
+                    <img src="images/Smile-Vikas.webp" alt="about-me-image">
                 </figure>
             </div>
             <div id="about-me-content" class="m-15">
@@ -167,9 +169,11 @@
             <div id="portfolio-cards" class="center">
                 <div class="portfolio-card">
                     <div class="work-img">
-                        <figure>
-                            <img src="images/portfolio-img-1.png" alt="portfolio-img">
-                        </figure>
+                        <a href="https://codepen.io/vikaskr775246/full/jOxPRGR" target="_blank">
+                            <figure>
+                                <img src="images/portfolio-img-1.webp" alt="portfolio-img">
+                            </figure>
+                        </a>
                     </div>
                     <div class="work-info">
                         <h2>Zip File Reader.</h2>
@@ -184,9 +188,11 @@
                 </div>
                 <div class="portfolio-card">
                     <div class="work-img">
-                        <figure>
-                            <img src="images/portfolio-img-2.png" alt="portfolio-img">
-                        </figure>
+                        <a href="https://codepen.io/vikaskr775246/full/abGpKda" target="_blank">
+                            <figure>
+                                <img src="images/portfolio-img-2.webp" alt="portfolio-img">
+                            </figure>
+                        </a>
                     </div>
                     <div class="work-info">
                         <h2>File Uploader with bytes.</h2>
@@ -202,9 +208,11 @@
                 </div>
                 <div class="portfolio-card">
                     <div class="work-img">
-                        <figure>
-                            <img src="images/portfolio-img-3.png" alt="">
-                        </figure>
+                        <a href="https://codepen.io/vikaskr775246/full/MWGpzEZ" target="_blank">
+                            <figure>
+                                <img src="images/portfolio-img-3.webp" alt="portfolio-img">
+                            </figure>
+                        </a>
                     </div>
                     <div class="work-info">
                         <h2>Notes App</h2>
@@ -220,9 +228,11 @@
                 </div>
                 <div class="portfolio-card">
                     <div class="work-img">
-                        <figure>
-                            <img src="images/portfolio-img-4.png" alt="portfolio-img">
-                        </figure>
+                        <a href="https://codepen.io/vikaskr775246/full/zYjdNby" target="_blank">
+                            <figure>
+                                <img src="images/portfolio-img-4.webp" alt="portfolio-img">
+                            </figure>
+                        </a>
                     </div>
                     <div class="work-info">
                         <h2>Tic Tac Toe</h2>
@@ -268,15 +278,17 @@
                         massage</a>
                 </div>
             </aside>
-            <form action="#" class="center" onsubmit="SubmitEvent(); reset(); return false">
-                <div id="form-wapper" class="center m-15">
-                    <input type="text" name="full_Name" id="full_Name" placeholder="Your Full Name" class="m-15">
-                    <input type="email" name="email" id="email" placeholder="Your Email" class="m-15">
-                    <textarea name="message" id="massage" cols="30" rows="10" placeholder="Your Message"
-                        class="m-15"></textarea>
-                    <input type="button" value="Send Massage" class="btn m-15" id="submit">
-                </div>
-            </form>
+            <div id="form-wapper" class="center">
+                <form action="#" class="center m-15" onsubmit="SubmitEvent(); reset(); return false">
+                    <input type="text" name="FullName" id="full_Name" placeholder="Your Full Name" class="m-15"
+                        required>
+                    <input type="email" name="Email" id="email" placeholder="Your Email" class="m-15" required>
+                    <input type="text" name="Subject" id="subject" placeholder="Subject" class="m-15" required>
+                    <textarea name="Message" id="massage" cols="30" rows="10" placeholder="Your Message" class="m-15"
+                        required minlength="10"></textarea>
+                    <button type="submit" class="btn m-15" id="submit">Send Massage</button>
+                </form>
+            </div>
         </div>
     </div>
     <footer class="center">
@@ -290,27 +302,16 @@
                 <li><a href="#contact">contact</a></li>
             </ul>
             <ul id="footer-social-media-icons" class="m-15 center">
-                <li><a href="https://www.facebook.com/profile.php?id=100014834951104" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=100014834951104" target="_blank"><i
+                            class="fa-brands fa-facebook-f"></i></a></li>
                 <li><a href="#ComingSoon"><i class="fa-brands fa-instagram"></i></a></li>
             </ul>
             <p class="m-15">&#169; vikas. All Rights reserved</p>
         </div>
     </footer>
 </body>
-<script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
-
-    function querySelector(value, parent = document) {
-        return parent.querySelector(`${value}`);
-    }
-    const nav_1 = querySelector('#nav_1');
-    const about_img = querySelector('#about-img');
-    about_img.onmouseenter = () => {
-        about_img.children[0].classList.add('active');
-    };
-    about_img.onmouseleave = () => {
-        about_img.children[0].classList.remove('active');
-    };
     window.onscroll = (e) => {
         const y = Math.floor(pageYOffset);
         // console.log(y);
