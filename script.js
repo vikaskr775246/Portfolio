@@ -1,11 +1,23 @@
 function querySelector(value, parent = document) {
     return parent.querySelector(`${value}`);
 };
+// nav scroll event start
+const nav_1 = querySelector('#nav_1');
+window.onscroll = (e) => {
+    const y = Math.floor(pageYOffset);
+    if (y > 70) {
+        nav_1.classList.add('active');
+    } else {
+        nav_1.classList.remove('active');
+    }
+}
+// nav scroll event end
 //about event start
 const full_Name = querySelector('#full_Name');
 const email = querySelector('#email');
 const subject = querySelector('#subject');
 const massage = querySelector('#massage');
+
 const about_mouse = () => {
     const nav_1 = querySelector('#nav_1');
     const about_img = querySelector('#about-img');
