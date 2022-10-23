@@ -12,20 +12,6 @@
     <link rel="stylesheet" href="style.css">
     <style>
         /* wapstie in under contraction */
-        #social-media-icons {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: baseline;
-            display: none;
-            /* font-family: 'Poppins', sans-serif; */
-        }
-
-        #social-media-icons li {
-            padding: 10px;
-            cursor: pointer;
-            font-size: 1.2rem;
-        }
 
         /* wapstie in under contraction */
     </style>
@@ -44,12 +30,28 @@
     </nav>
     <header class="center" id="home">
         <div id="my-info" class="center-mx-wth">
-            <div id="my-self" class="m-15">
-                <h4>hello, i'm</h4>
-                <h1 id="name">vikas kumar</h1>
-                <h2 id="categorie">web developer</h2>
-                <h3 id="location">from greater noida</h3>
-                <a href="images/Resume.pdf" download id="cv">Download CV</a>
+            <div class="wapper">
+                <ul id="social-media-icons">
+                    <li><a href="https://www.linkedin.com/in/vikas-kumar-940508246" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                    </li>
+                    <li><a href="https://github.com/vikaskr775246?tab=repositories" target="_blank"><i
+                                class="fa-brands fa-github"></i></a>
+                    </li>
+                    <li><a href="https://codepen.io/vikaskr775246" target="_blank"><i
+                                class="fa-brands fa-codepen"></i></a>
+                    </li>
+                </ul>
+                <div id="my-self" class="m-15">
+                    <h4>hello, i'm</h4>
+                    <h1 id="name">vikas kumar</h1>
+                    <h2 id="categorie">front end developer</h2>
+                    <h3 id="location">from greater noida</h3>
+                    <div id="self-btn">
+                        <a href="images/Resume.pdf" download>Download CV</a>
+                        <a href="#contact" class="m-15">hire me</a>
+                    </div>
+                </div>
             </div>
             <div id="my-img" class="m-15">
                 <figure>
@@ -81,7 +83,8 @@
                         <small>10+ completed</small>
                     </article>
                 </div>
-                <p>I am a web developer Right now I am focusing on React, but still searching for other technologies and
+                <p>I am a web developer Right now I am focusing on React and Next but still searching for other
+                    technologies and
                     frameworks that catch my interest! If you're looking for a developer to add to your team, I'd love
                     to hear from you!</p>
             </div>
@@ -147,14 +150,14 @@
                             <box-icon type='solid' name='badge-check' color="var(--color-primary)"></box-icon>
                             <div class="skill">
                                 <h3 class="skill-name">React</h3>
-                                <div class="skill-info">Beginner <span class="skills-hide">sdfa</span></div>
+                                <div class="skill-info">Beginner <span class="skills-hide">skl</span></div>
                             </div>
                         </div>
-                        <div class="skills skills-hide">
+                        <div class="skills">
                             <box-icon type='solid' name='badge-check' color="var(--color-primary)"></box-icon>
                             <div class="skill">
-                                <h3 class="skill-name">Wordpress</h3>
-                                <div class="skill-info">Beginner</div>
+                                <h3 class="skill-name">Next</h3>
+                                <div class="skill-info">Beginner <span class="skills-hide">skil</span></div>
                             </div>
                         </div>
                     </div>
@@ -280,12 +283,12 @@
             </aside>
             <div id="form-wapper" class="center">
                 <form action="#" class="center m-15" onsubmit="SubmitEvent(); reset(); return false">
-                    <input type="text" name="FullName" id="full_Name" placeholder="Your Full Name" class="m-15"
+                    <input type="text" name="FullName" id="full_Name" placeholder="Your Full Name" class="m-15 inputbox"
                         required>
-                    <input type="email" name="Email" id="email" placeholder="Your Email" class="m-15" required>
-                    <input type="text" name="Subject" id="subject" placeholder="Subject" class="m-15" required>
-                    <textarea name="Message" id="massage" cols="30" rows="10" placeholder="Your Message" class="m-15"
-                        required minlength="10"></textarea>
+                    <input type="email" name="Email" id="email" placeholder="Your Email" class="m-15 inputbox" required>
+                    <input type="text" name="Subject" id="subject" placeholder="Subject" class="m-15 inputbox" required>
+                    <textarea name="Message" id="massage" cols="30" rows="10" placeholder="Your Message"
+                        class="m-15 inputbox" required minlength="10"></textarea>
                     <button type="submit" class="btn m-15" id="submit">Send Massage</button>
                 </form>
             </div>
@@ -312,15 +315,6 @@
 </body>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
-    window.onscroll = (e) => {
-        const y = Math.floor(pageYOffset);
-        // console.log(y);
-        if (y > 70) {
-            nav_1.classList.add('active');
-        } else {
-            nav_1.classList.remove('active');
-        }
-    }
 </script>
 
 </html>
