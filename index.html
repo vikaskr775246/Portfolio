@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,8 +11,68 @@
     <script defer src="fontawesome.min.js"></script>
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#603cba">
+    <meta name="theme-color" content="#ffffff">
     <style>
         /* wapstie in under contraction */
+        #work {
+            justify-content: center;
+        }
+
+        .work-wapper {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .work-wapper li {
+            margin: 15px;
+        }
+
+        .work-wapper li a {
+            color: var(--text-col);
+            padding: 8px 35px;
+            border-radius: 10px;
+            transition: .5s;
+        }
+
+        .work-wapper li a:hover {
+            background-color: var(--color-primary);
+        }
+
+        li:has(.dropdown-menu) {
+            position: relative;
+        }
+
+        .dropdown-menu:hover~.dropdown,
+        .dropdown-menu~.dropdown:hover {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .dropdown-menu~.dropdown {
+            position: absolute;
+            z-index: 2;
+            opacity: 0;
+            visibility: hidden;
+            transition: .5s;
+        }
+
+        .dropdown li {
+            margin: 10px 0;
+        }
+
+        .dropdown li a {
+            background-color: var(--text-light);
+        }
+
+        .dropdown li a:hover {
+            background-color: var(--color-primary);
+        }
 
         /* wapstie in under contraction */
     </style>
@@ -32,13 +93,13 @@
         <div id="my-info" class="center-mx-wth">
             <div class="wapper">
                 <ul id="social-media-icons">
-                    <li><a href="https://www.linkedin.com/in/vikas-kumar-940508246" target="_blank"><i
-                                class="fa-brands fa-linkedin"></i></a>
+                    <li><a href="https://www.linkedin.com/in/vikas-kumar-940508246" aria-label="Linkedin"
+                            target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                     </li>
-                    <li><a href="https://github.com/vikaskr775246?tab=repositories" target="_blank"><i
-                                class="fa-brands fa-github"></i></a>
+                    <li><a href="https://github.com/vikaskr775246?tab=repositories" aria-label="Github"
+                            target="_blank"><i class="fa-brands fa-github"></i></a>
                     </li>
-                    <li><a href="https://codepen.io/vikaskr775246" target="_blank"><i
+                    <li><a href="https://codepen.io/vikaskr775246" aria-label="Codepen" target="_blank"><i
                                 class="fa-brands fa-codepen"></i></a>
                     </li>
                 </ul>
@@ -169,8 +230,21 @@
         <h4 class="small-h">my recent work</h4>
         <h1 class="big-h">portfolio</h1>
         <div id="portfolio-wapper" class="center-mx-wth center">
+            <div id="work" class="center-mx-wth">
+                <ul class="work-wapper center">
+                    <li><a href="" data-col="all">all</a></li>
+                    <li><a href="" data-col="app">app</a></li>
+                    <li><a href="" class="dropdown-menu" data-col="web">web</a>
+                        <ul class="dropdown">
+                            <li><a href="" data-col="react">react</a></li>
+                            <li><a href="" data-col="next">next</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" data-col="assignment">assignment</a></li>
+                </ul>
+            </div>
             <div id="portfolio-cards" class="center">
-                <div class="portfolio-card">
+                <div class="portfolio-card" data-app="true">
                     <div class="work-img">
                         <a href="https://codepen.io/vikaskr775246/full/jOxPRGR" target="_blank">
                             <figure>
@@ -189,7 +263,7 @@
                             Demo</a>
                     </div>
                 </div>
-                <div class="portfolio-card">
+                <div class="portfolio-card" data-app="true">
                     <div class="work-img">
                         <a href="https://codepen.io/vikaskr775246/full/abGpKda" target="_blank">
                             <figure>
@@ -209,7 +283,7 @@
                     </div>
 
                 </div>
-                <div class="portfolio-card">
+                <div class="portfolio-card" data-app="true">
                     <div class="work-img">
                         <a href="https://codepen.io/vikaskr775246/full/MWGpzEZ" target="_blank">
                             <figure>
@@ -229,7 +303,7 @@
                             Demo</a>
                     </div>
                 </div>
-                <div class="portfolio-card">
+                <div class="portfolio-card" data-web="true">
                     <div class="work-img">
                         <a href="https://codepen.io/vikaskr775246/full/zYjdNby" target="_blank">
                             <figure>
@@ -248,6 +322,27 @@
                         <a href="https://github.com/vikaskr775246/Tic-Tac-Toe.git" target="_blank"
                             class="github btn">github</a>
                         <a href="https://codepen.io/vikaskr775246/full/zYjdNby" target="_blank" class="demo btn">Live
+                            Demo</a>
+                    </div>
+                </div>
+                <div class="portfolio-card" data-assignment="true">
+                    <div class="work-img">
+                        <a href="https://codepen.io/vikaskr775246/full/GRdVBLq" target="_blank">
+                            <figure>
+                                <img src="images/wegowifi.png" alt="portfolio-img">
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="work-info">
+                        <h2>we go wifi</h2>
+                        <p>
+                            this
+                        </p>
+                    </div>
+                    <div class="work-btns">
+                        <a href="https://github.com/vikaskr775246/WeGoWiFi.git" target="_blank"
+                            class="github btn">github</a>
+                        <a href="https://codepen.io/vikaskr775246/full/GRdVBLq" target="_blank" class="demo btn">Live
                             Demo</a>
                     </div>
                 </div>
@@ -305,9 +400,9 @@
                 <li><a href="#contact">contact</a></li>
             </ul>
             <ul id="footer-social-media-icons" class="m-15 center">
-                <li><a href="https://www.facebook.com/profile.php?id=100014834951104" target="_blank"><i
-                            class="fa-brands fa-facebook-f"></i></a></li>
-                <li><a href="#ComingSoon"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=100014834951104" aria-label="Facebook"
+                        target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="#ComingSoon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
             </ul>
             <p class="m-15">&#169; vikas. All Rights reserved</p>
         </div>
@@ -315,6 +410,29 @@
 </body>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
+    const dataCol = document.querySelectorAll('a[data-col]');
+    let portfolioCard = document.querySelectorAll('.portfolio-card');
+    dataCol.forEach(elm => {
+        elm.addEventListener('click', (e) => {
+            // console.log(e.target.href)
+            e.preventDefault()
+            let Attr = e.target.getAttribute('data-col')
+            // window.location.replace(e.target.href + '/' + Attr);
+            let Card = document.querySelectorAll(`[data-${Attr}]`);
+            // console.log(Attr)
+            if (Attr === 'all') {
+                return isCardDisplay('block');
+            } else {
+                isCardDisplay('none');
+                isCardDisplay('block', Card);
+            }
+        })
+    })
+    const isCardDisplay = (displayVal, elm = portfolioCard) => {
+        for (const item of elm) {
+            item.style.display = `${displayVal}`
+        }
+    }
 </script>
 
 </html>
