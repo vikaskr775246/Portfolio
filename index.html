@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,59 +19,6 @@
     <meta name="theme-color" content="#ffffff">
     <style>
         /* wapstie in under contraction */
-        #work {
-            justify-content: center;
-        }
-
-        .work-wapper {
-            flex-direction: row;
-            flex-wrap: wrap;
-        }
-
-        .work-wapper li {
-            margin: 15px;
-        }
-
-        .work-wapper li a {
-            color: var(--text-col);
-            padding: 8px 35px;
-            border-radius: 10px;
-            transition: .5s;
-        }
-
-        .work-wapper li a:hover {
-            background-color: var(--color-primary);
-        }
-
-        li:has(.dropdown-menu) {
-            position: relative;
-        }
-
-        .dropdown-menu:hover~.dropdown,
-        .dropdown-menu~.dropdown:hover {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .dropdown-menu~.dropdown {
-            position: absolute;
-            z-index: 2;
-            opacity: 0;
-            visibility: hidden;
-            transition: .5s;
-        }
-
-        .dropdown li {
-            margin: 10px 0;
-        }
-
-        .dropdown li a {
-            background-color: var(--text-light);
-        }
-
-        .dropdown li a:hover {
-            background-color: var(--color-primary);
-        }
 
         /* wapstie in under contraction */
     </style>
@@ -232,19 +178,20 @@
         <div id="portfolio-wapper" class="center-mx-wth center">
             <div id="work" class="center-mx-wth">
                 <ul class="work-wapper center">
-                    <li><a href="" data-col="all">all</a></li>
+                    <li class="active"><a href="" data-col="all">all</a></li>
                     <li><a href="" data-col="app">app</a></li>
-                    <li><a href="" class="dropdown-menu" data-col="web">web</a>
+                    <li><a href="" class="dropdown-menu" data-col="web assignment">web</a>
                         <ul class="dropdown">
                             <li><a href="" data-col="react">react</a></li>
                             <li><a href="" data-col="next">next</a></li>
                         </ul>
                     </li>
-                    <li><a href="" data-col="assignment">assignment</a></li>
+                    <li><a href="" data-col="web assignment">assignment</a></li>
+                    <div class="inductor"></div>
                 </ul>
             </div>
             <div id="portfolio-cards" class="center">
-                <div class="portfolio-card" data-app="true">
+                <div class="portfolio-card" data-name="app">
                     <div class="work-img">
                         <a href="https://codepen.io/vikaskr775246/full/jOxPRGR" target="_blank">
                             <figure>
@@ -263,7 +210,7 @@
                             Demo</a>
                     </div>
                 </div>
-                <div class="portfolio-card" data-app="true">
+                <div class="portfolio-card" data-name="app">
                     <div class="work-img">
                         <a href="https://codepen.io/vikaskr775246/full/abGpKda" target="_blank">
                             <figure>
@@ -283,7 +230,7 @@
                     </div>
 
                 </div>
-                <div class="portfolio-card" data-app="true">
+                <div class="portfolio-card" data-name="app">
                     <div class="work-img">
                         <a href="https://codepen.io/vikaskr775246/full/MWGpzEZ" target="_blank">
                             <figure>
@@ -303,7 +250,7 @@
                             Demo</a>
                     </div>
                 </div>
-                <div class="portfolio-card" data-web="true">
+                <div class="portfolio-card" data-name="app">
                     <div class="work-img">
                         <a href="https://codepen.io/vikaskr775246/full/zYjdNby" target="_blank">
                             <figure>
@@ -325,7 +272,26 @@
                             Demo</a>
                     </div>
                 </div>
-                <div class="portfolio-card" data-assignment="true">
+                <div class="portfolio-card" data-name="web assignment">
+                    <div class="work-img">
+                        <a href="https://codepen.io/vikaskr775246/full/yLEeKRW" target="_blank">
+                            <figure>
+                                <img src="images/landing-img.webp" alt="portfolio-img">
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="work-info">
+                        <h2>landing page</h2>
+                        <p>this wabsite base is wood floors. </p>
+                    </div>
+                    <div class="work-btns">
+                        <a href="https://github.com/vikaskr775246/Landingpage.git" target="_blank"
+                            class="github btn">github</a>
+                        <a href="https://codepen.io/vikaskr775246/full/yLEeKRW" target="_blank" class="demo btn">Live
+                            Demo</a>
+                    </div>
+                </div>
+                <div class="portfolio-card" data-name="web assignment">
                     <div class="work-img">
                         <a href="https://codepen.io/vikaskr775246/full/GRdVBLq" target="_blank">
                             <figure>
@@ -335,9 +301,7 @@
                     </div>
                     <div class="work-info">
                         <h2>we go wifi</h2>
-                        <p>
-                            this
-                        </p>
+                        <p>this site base is Internet </p>
                     </div>
                     <div class="work-btns">
                         <a href="https://github.com/vikaskr775246/WeGoWiFi.git" target="_blank"
@@ -409,30 +373,5 @@
     </footer>
 </body>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
-<script>
-    const dataCol = document.querySelectorAll('a[data-col]');
-    let portfolioCard = document.querySelectorAll('.portfolio-card');
-    dataCol.forEach(elm => {
-        elm.addEventListener('click', (e) => {
-            // console.log(e.target.href)
-            e.preventDefault()
-            let Attr = e.target.getAttribute('data-col')
-            // window.location.replace(e.target.href + '/' + Attr);
-            let Card = document.querySelectorAll(`[data-${Attr}]`);
-            // console.log(Attr)
-            if (Attr === 'all') {
-                return isCardDisplay('block');
-            } else {
-                isCardDisplay('none');
-                isCardDisplay('block', Card);
-            }
-        })
-    })
-    const isCardDisplay = (displayVal, elm = portfolioCard) => {
-        for (const item of elm) {
-            item.style.display = `${displayVal}`
-        }
-    }
-</script>
 
 </html>
