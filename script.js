@@ -12,6 +12,57 @@ window.onscroll = (e) => {
     }
 }
 // nav scroll event end
+// protfolio start
+// portfolio section inductor start
+const inductor = document.querySelector('.inductor');
+const li = document.querySelectorAll('.work-wapper>li');
+findSize(li[0]);
+li.forEach((elm, idx) => {
+    elm.onclick = () => {
+        for (const clasRemove of li) {
+            clasRemove.classList.remove('active');
+        }
+        elm.classList.add('active');
+        findSize(elm);
+    }
+});
+function findSize(elm) {
+    const { width, height, left } = elm.getBoundingClientRect();
+    inductor.style.width = (width - 4) + 'px';
+    inductor.style.height = height + 'px';
+    inductor.style.left = left + 'px';
+}
+// portfolio section inductor end
+// protfolio buttons validate start
+const dataCol = document.querySelectorAll('a[data-col]');
+let portfolioCard = document.querySelectorAll('.portfolio-card');
+dataCol.forEach(elm => {
+    elm.addEventListener('click', (e) => {
+        e.preventDefault();
+        let Attr = e.target.getAttribute('data-col')
+        isCardDisplay('none');
+        if (Attr === 'all') {
+            return isCardDisplay('block');
+        } else if (Attr.split(' ').length == 1) {
+            let Card = document.querySelectorAll(`[data-${Attr}]`);
+            isCardDisplay('block', Card);
+        } else {
+            isCardDisplay('none');
+            Attr = Attr.split(' ')
+            for (const Att of Attr) {
+                let Card = document.querySelectorAll(`[data-${Att}]`);
+                isCardDisplay('block', Card)
+            }
+        }
+    })
+});
+const isCardDisplay = (displayVal, elm = portfolioCard) => {
+    for (const item of elm) {
+        item.style.display = `${displayVal}`
+    }
+}
+// protfolio buttons validate end
+// protfolio end
 //about event start
 const full_Name = querySelector('#full_Name');
 const email = querySelector('#email');
