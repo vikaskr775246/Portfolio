@@ -31,6 +31,12 @@ function findSize(elm) {
     inductor.style.width = (width - 4) + 'px';
     inductor.style.height = height + 'px';
     inductor.style.left = left + 'px';
+    console.log(elm.getBoundingClientRect())
+    if (innerWidth < 568 && li[3].classList.contains('active')) {
+        inductor.style.top = '215px';
+    } else if (innerWidth < 568) {
+        inductor.style.top = '151px';
+    }
 }
 // portfolio section inductor end
 // protfolio buttons validate start
@@ -40,26 +46,33 @@ dataCol.forEach(elm => {
     elm.addEventListener('click', (e) => {
         e.preventDefault();
         let Attr = e.target.getAttribute('data-col')
-        isCardDisplay('none');
-        if (Attr === 'all') {
-            return isCardDisplay('block');
-        } else if (Attr.split(' ').length == 1) {
-            let Card = document.querySelectorAll(`[data-${Attr}]`);
-            isCardDisplay('block', Card);
+        let AttrLen = Attr.split(' ');
+        isCard('none')
+        if (Attr == "all") {
+            isCard('block');
+        } else if (AttrLen.length == 1) {
+            isCardDisplay('block', Attr)
         } else {
-            isCardDisplay('none');
-            Attr = Attr.split(' ')
-            for (const Att of Attr) {
-                let Card = document.querySelectorAll(`[data-${Att}]`);
-                isCardDisplay('block', Card)
+            isCard('none')
+            isCardDisplay('block', Attr)
+        }
+    });
+});
+const isCard = (Val, elm = portfolioCard) => {
+    for (const item of elm) {
+        item.style.display = `${Val}`;
+    }
+}
+const isCardDisplay = (displayVal, Attr, elm = portfolioCard) => {
+    portfolioCard.forEach(elm => {
+        let dataName = elm.getAttribute('data-name')
+        if (dataName == Attr) {
+            for (const item of [elm]) {
+                item.style.display = `${displayVal}`
             }
         }
-    })
-});
-const isCardDisplay = (displayVal, elm = portfolioCard) => {
-    for (const item of elm) {
-        item.style.display = `${displayVal}`
-    }
+    });
+
 }
 // protfolio buttons validate end
 // protfolio end
