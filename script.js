@@ -31,7 +31,6 @@ function findSize(elm) {
     inductor.style.width = (width - 4) + 'px';
     inductor.style.height = height + 'px';
     inductor.style.left = left + 'px';
-    console.log(elm.getBoundingClientRect())
     if (innerWidth < 568 && li[3].classList.contains('active')) {
         inductor.style.top = '215px';
     } else if (innerWidth < 568) {
@@ -46,33 +45,19 @@ dataCol.forEach(elm => {
     elm.addEventListener('click', (e) => {
         e.preventDefault();
         let Attr = e.target.getAttribute('data-col')
-        let AttrLen = Attr.split(' ');
-        isCard('none')
-        if (Attr == "all") {
-            isCard('block');
-        } else if (AttrLen.length == 1) {
-            isCardDisplay('block', Attr)
-        } else {
-            isCard('none')
-            isCardDisplay('block', Attr)
-        }
+        Attr == 'all' ? isCard() : isCardDisplay(Attr);
     });
 });
-const isCard = (Val, elm = portfolioCard) => {
-    for (const item of elm) {
-        item.style.display = `${Val}`;
+const isCard = () => {
+    for (const Card of portfolioCard) {
+        Card.style.display = `block`;
     }
 }
-const isCardDisplay = (displayVal, Attr, elm = portfolioCard) => {
-    portfolioCard.forEach(elm => {
-        let dataName = elm.getAttribute('data-name')
-        if (dataName == Attr) {
-            for (const item of [elm]) {
-                item.style.display = `${displayVal}`
-            }
-        }
+const isCardDisplay = (Attr, Cards = portfolioCard) => {
+    Cards.forEach(Card => {
+        const Cad = Card.getAttribute(`data-${Attr}`)
+        Cad != null ? Card.style.display = `block` : Card.style.display = `none`;
     });
-
 }
 // protfolio buttons validate end
 // protfolio end
